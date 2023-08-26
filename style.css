@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.outer-box{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top left, #3ed8ff, #a8f5ff);
+}
+
+.inner-box{
+    width: 400px;
+    margin: 0 auto;
+    /* to make sign content in the centre of page // can be done using flexbox*/
+    position: relative;
+    /* top: 50%; */
+    top: 50%;
+    transform: translateY(-50%); 
+    padding: 10px 10px;
+    /* background-color: white; */
+    /* for glassomorphic effect */
+    background: linear-gradient(to top left, #ffffffff, #ffffff33);
+    /* to blurr circles when they go below sign up box  use backdrop filter*/
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #2773a5;
+}
+
+.signup-header h1{
+    font-size: 2.5rem;
+    color: #212121;
+}
+
+.signup-header p{
+    font-size: 0.9rem;
+}
+
+.signup-body{
+    margin: 20px 0;
+}
+
+/* this is why we have created p tags for label and input */
+.signup-body p{
+    margin: 10px 0;
+}
+
+.signup-body p label{
+    display: block;
+    font-weight: bold;
+}
+
+.signup-body p input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+    border: 2px solid #cccc;
+    border-radius: 4px;
+    /* these do not inherit font size */
+    font-size: 1rem;
+}
+
+/* we can target by submit id also */
+.signup-body p input[type="submit"]{
+    background-color: #3498db;
+    /* some border is seen */
+    border: none;
+    /* when cursur comes here it changes */
+    cursor: pointer;
+    color: white;
+}
+
+/* defining hover property */
+/* using pseudo selector */
+.signup-body p input[type="submit"]:hover{
+    /* we want some dark shades of original */
+    background-color: #20618d;
+
+}
+
+/* styling footer */
+.signup-footer{
+    text-align: center;
+    /* light shade */
+    color: #555;
+}
+
+.signup-footer a{
+    color: #2773a5;
+}
+
+
+/* make labels bold */
+/* give shadow to inner box */
+/* box-shadow: right bottom blur color */
+.circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    /* instead of background color we will define background */
+    /* below gradient will go from bottom left to top right  */
+    /* color  ffffffaa last aa is for alpha */
+    background: linear-gradient(to top right, #ffffffaa, #ffffffff);
+    /* to change position of circles */
+    position: absolute;
+}
+
+.c1{
+    top: 100px;
+    left: 30px;
+}
+
+.c2{
+    bottom: 100px;
+    right: 30px;
+}
+
+/* now in inspector tools we can see that whwn we decrease window size then circle come on top of signup box */
+/* they should go behind it */
+/* so increase zindex of signup box  */
+.inner-box{
+    z-index: 2;
+}
+
+/* we have not make it responsive though */
+
+/* to have glassomorphic effect */
+
+
+
+
+
+
+
+
